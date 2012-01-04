@@ -1,0 +1,17 @@
+package com.bkids.framework.impl;
+
+import com.bkids.framework.Sound;
+
+public class AndroidSound implements Sound {
+
+	public void play(float volume) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void dispose() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,7 @@
+package com.bkids.framework.impl;
+
+import android.view.View.OnTouchListener;
+
+public interface TouchHandler extends OnTouchListener {
+
+}

@@ -1,0 +1,5 @@
+package com.bkids.framework;
+
+public class Pool<T> {
+
+}

@@ -1,0 +1,24 @@
+package com.bkids.framework.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import android.view.KeyEvent;
+import android.view.View;
+import android.view.View.OnKeyListener;
+
+import com.bkids.framework.Pool;
+
+public class KeyboardHandler implements OnKeyListener {
+
+	boolean[] pressedKeys = new boolean[128];
+	Pool<KeyEvent> keyEventPool;
+	List<KeyEvent> keyEventsBuffer = new ArrayList<KeyEvent>();
+	List<KeyEvent> keyEvents = new ArrayList<KeyEvent>();
+	
+	public boolean onKey(View arg0, int arg1, KeyEvent arg2) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

@@ -1,0 +1,47 @@
+package com.bkids.androidgames.mrnom;
+
+import com.bkids.framework.Game;
+import com.bkids.framework.Graphics;
+import com.bkids.framework.Screen;
+import com.bkids.framework.Graphics.PixmapFormat;
+
+public class LoadingScreen extends Screen {
+	
+	public LoadingScreen(Game game){
+		super(game);
+	}
+
+		
+	@Override
+	public void update(float deltaTime) {
+		Graphics g = game.getGraphics();
+		
+		Assets.background = g.newPixmap("background.png", PixmapFormat.RGB565);
+
+	}
+
+	@Override
+	public void present(float deltaTime) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void pause() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void resume() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void dispose() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

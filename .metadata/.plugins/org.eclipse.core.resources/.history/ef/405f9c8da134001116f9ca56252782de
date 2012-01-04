@@ -1,0 +1,7 @@
+package com.bkids.androidgames.mrnom;
+
+public class SnakePart {
+	
+	public int x,y;
+
+}

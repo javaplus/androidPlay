@@ -1,0 +1,54 @@
+package com.bkids.framework.impl;
+
+import com.bkids.framework.Graphics;
+import com.bkids.framework.Pixmap;
+
+public class AndroidGraphics implements Graphics {
+
+	public Pixmap newPixmap(String fileName, PixmapFormat format) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void clear(int color) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void drawPixel(int x, int y, int color) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void drawLine(int x, int y, int x2, int y2, int color) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void drawRect(int x, int y, int width, int height, int color) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void drawPixmap(Pixmap pixmap, int x, int y, int srcX, int srcY,
+			int srcWidth, int srcHeight) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void drawPixmap(Pixmap pixmap, int x, int y) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public int getWidth() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public int getHeight() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

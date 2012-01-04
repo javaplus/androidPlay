@@ -1,0 +1,37 @@
+package com.bkids.framework.impl;
+
+import java.util.List;
+
+import android.view.MotionEvent;
+import android.view.View;
+
+import com.bkids.framework.Input.TouchEvent;
+
+public class SingleTouchHandler implements TouchHandler {
+
+	public boolean onTouch(View arg0, MotionEvent arg1) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public boolean isTouchDown(int pointer) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public int getTouchX(int pointer) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public int getTouchY(int pointer) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public List<TouchEvent> getTouchEvents() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

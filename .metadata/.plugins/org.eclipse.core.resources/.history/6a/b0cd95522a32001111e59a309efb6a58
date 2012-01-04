@@ -1,0 +1,76 @@
+package com.bkids.framework.impl;
+
+import android.content.res.AssetManager;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.Rect;
+
+import com.bkids.framework.Graphics;
+import com.bkids.framework.Pixmap;
+
+public class AndroidGraphics implements Graphics {
+
+	AssetManager assetManager;
+	Bitmap frameBuffer;
+	Canvas canvas;
+	Paint paint;
+	Rect srcRect = new Rect();
+	Rect dstRect = new Rect();
+	
+	
+	public AndroidGraphics(AssetManager assets, Bitmap frameBuffer){
+		
+		this.assetManager = assets;
+		this.frameBuffer = frameBuffer;
+		this.canvas = new Canvas(frameBuffer);
+		this.paint = new Paint();
+	}
+	
+	public Pixmap newPixmap(String fileName, PixmapFormat format) {
+		
+		return null;
+	}
+
+	public void clear(int color) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void drawPixel(int x, int y, int color) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void drawLine(int x, int y, int x2, int y2, int color) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void drawRect(int x, int y, int width, int height, int color) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void drawPixmap(Pixmap pixmap, int x, int y, int srcX, int srcY,
+			int srcWidth, int srcHeight) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public void drawPixmap(Pixmap pixmap, int x, int y) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public int getWidth() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public int getHeight() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

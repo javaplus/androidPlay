@@ -1,0 +1,12 @@
+package com.bkids.framework.impl;
+
+import android.view.SurfaceView;
+
+public class AndroidFastRenderView extends SurfaceView implements Runnable {
+
+	public void run() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

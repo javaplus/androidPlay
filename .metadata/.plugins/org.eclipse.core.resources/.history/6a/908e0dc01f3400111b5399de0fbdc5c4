@@ -1,0 +1,50 @@
+package com.bkids.androidgames.mrnom;
+
+import java.util.List;
+
+import com.bkids.framework.Game;
+import com.bkids.framework.Graphics;
+import com.bkids.framework.Input.TouchEvent;
+import com.bkids.framework.Screen;
+
+public class MainMenuScreen extends Screen {
+
+	public MainMenuScreen(Game game) {
+		super(game);
+		
+	}
+
+	@Override
+	public void update(float deltaTime) {
+		Graphics g = game.getGraphics();
+		List<TouchEvent> touchEvents.game.getInput().getTouchEvents();
+		game.getInput().getKeyEvents();
+		int len = touchEvents.size();
+
+	}
+
+	@Override
+	public void present(float deltaTime) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void pause() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void resume() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void dispose() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

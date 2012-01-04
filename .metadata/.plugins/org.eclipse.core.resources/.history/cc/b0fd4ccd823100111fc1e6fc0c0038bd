@@ -1,0 +1,13 @@
+package com.bkids.framework;
+
+public class Pool<T> {
+
+	public interface PoolObjectFactory<T>{
+		public T createObject();
+	}
+	
+	private final List<T> freeObjects;
+	private final PoolObjectFactory<T> factory;
+	private final int maxSize;
+	
+}

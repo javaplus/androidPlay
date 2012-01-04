@@ -1,0 +1,5 @@
+package com.bkids.framework;
+
+public abstract class Screen {
+
+}

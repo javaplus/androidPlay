@@ -1,0 +1,54 @@
+package com.bkids.framework.impl;
+
+import java.util.List;
+
+import com.bkids.framework.Input;
+
+public class AndroidInput implements Input {
+
+	public boolean isKeyPressed(int keyCode) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public boolean isTouchDown(int pointer) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public int getTouchX(int pointer) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public int getTouchY(int pointer) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public float getAccelX() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public float getAccelY() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public float getAccelZ() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public List<KeyEvent> getKeyEvents() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public List<TouchEvent> getTouchEvents() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

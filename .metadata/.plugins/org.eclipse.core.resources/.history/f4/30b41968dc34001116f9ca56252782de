@@ -1,0 +1,73 @@
+package com.bkids.androidgames.mrnom;
+
+import java.util.List;
+
+import com.bkids.framework.Game;
+import com.bkids.framework.Input.TouchEvent;
+import com.bkids.framework.Screen;
+
+public class GameScreen extends Screen {
+	
+	enum GameState{
+		Ready,
+		Running,
+		Paused,
+		GameOver
+	}
+	GameState state = GameState.Ready;
+	World world;
+	int oldScore = 0;
+	String score = "0";
+
+	public GameScreen(Game game) {
+		super(game);
+		world = new World();
+		
+	}
+
+	@Override
+	public void update(float deltaTime) {
+		List<TouchEvent> touchEvents = game.getInput().getTouchEvents();
+		game.getInput().getKeyEvents();// clear these
+		if(state == GameState.Ready)
+			updateReady(touchEvents);
+		if(state == GameState.Running)
+			updateRunning(touchEvents, deltaTime);
+		if(state == GameState.Paused)
+			updatePaused(touchEvents);
+		if(state == GameState.GameOver)
+			updateGameOver(touchEvents);
+	}
+	
+	private void updateReady(List<TouchEvent> touchEvents){
+		// if they touched the screen at all start running!
+		if(touchEvents.size()>0){
+			state = GameState.Running;
+		}
+	}
+
+	@Override
+	public void present(float deltaTime) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void pause() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void resume() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void dispose() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.bkids;
+
+public interface Audio {
+
+}

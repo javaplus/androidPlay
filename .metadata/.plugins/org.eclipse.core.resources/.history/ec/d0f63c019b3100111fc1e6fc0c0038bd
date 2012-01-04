@@ -1,0 +1,46 @@
+package com.bkids.framework.impl;
+
+import java.util.List;
+
+import android.view.MotionEvent;
+import android.view.View;
+
+import com.bkids.framework.Input.TouchEvent;
+
+public class MultiTouchHandler implements TouchHandler {
+	
+	boolean[] isTouched = new boolean[20];
+	int[] touchX = new int[20];
+	int[] touchY = new int[20];
+	Pool<TouchEvent> touchEventPool;
+	List<TouchEvent> touchEvents = new ArrayList<TouchEvent>();
+	List<TouchEvent> touchEventsBuffer = new ArrayList<TouchEvent>();
+	float scaleX;
+	float scaleY;
+	
+	public boolean onTouch(View v, MotionEvent event) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public boolean isTouchDown(int pointer) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public int getTouchX(int pointer) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public int getTouchY(int pointer) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public List<TouchEvent> getTouchEvents() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

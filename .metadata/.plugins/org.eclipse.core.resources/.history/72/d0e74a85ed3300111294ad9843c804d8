@@ -1,0 +1,7 @@
+package com.bkids.androidgames.mrnom;
+
+import com.bkids.framework.impl.AndroidGame;
+
+public class MrNomGame extends AndroidGame {
+
+}

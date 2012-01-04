@@ -1,0 +1,5 @@
+package com.bkids.framework;
+
+public interface Game {
+
+}

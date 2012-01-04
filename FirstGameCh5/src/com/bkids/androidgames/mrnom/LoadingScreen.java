@@ -1,0 +1,101 @@
+package com.bkids.androidgames.mrnom;
+
+import android.graphics.Bitmap;
+import android.graphics.Matrix;
+import android.util.Log;
+import android.widget.Button;
+
+import com.bkids.framework.Game;
+import com.bkids.framework.Graphics;
+import com.bkids.framework.Graphics.PixmapFormat;
+import com.bkids.framework.impl.AndroidPixmap;
+import com.bkids.framework.Screen;
+
+public class LoadingScreen extends Screen {
+	
+	public LoadingScreen(Game game){
+		super(game);
+	}
+
+		
+	@Override
+	public void update(float deltaTime) {
+		
+		Log.d("LoadingScreen", "Begin loading Assets!");
+		Graphics g = game.getGraphics();
+		
+		Assets.background = g.newPixmap("background.png", PixmapFormat.RGB565);
+		Assets.logo = g.newPixmap("justPies.png", PixmapFormat.ARGB4444);
+		Assets.mainMenu = g.newPixmap("mainmenu.png", PixmapFormat.ARGB4444);
+		Assets.buttons = g.newPixmap("buttons.png", PixmapFormat.ARGB4444);
+		Assets.help1 = g.newPixmap("help1.png", PixmapFormat.ARGB4444);
+		Assets.help2 = g.newPixmap("help2.png", PixmapFormat.ARGB4444);
+		Assets.help3 = g.newPixmap("help3.png", PixmapFormat.ARGB4444);
+		Assets.numbers = g.newPixmap("numbers.png", PixmapFormat.ARGB4444);
+		Assets.ready = g.newPixmap("ready.png", PixmapFormat.ARGB4444);
+		Assets.pause = g.newPixmap("pausemenu.png", PixmapFormat.ARGB4444);
+		Assets.gameOver = g.newPixmap("gameover.png", PixmapFormat.ARGB4444);
+		Assets.headUp = g.newPixmap("karlUp.png", PixmapFormat.ARGB4444);
+		Assets.headLeft = g.newPixmap("karlLeft.png", PixmapFormat.ARGB4444);
+		Assets.headDown = g.newPixmap("karlDown.png", PixmapFormat.ARGB4444);
+		Assets.headRight = g.newPixmap("karlRight.png", PixmapFormat.ARGB4444);
+		Assets.tail = g.newPixmap("tail.png", PixmapFormat.ARGB4444);
+		Assets.stain1 = g.newPixmap("pie1.png", PixmapFormat.ARGB4444);
+		Assets.stain2 = g.newPixmap("pie1.png", PixmapFormat.ARGB4444);
+		Assets.stain3 = g.newPixmap("pie1.png", PixmapFormat.ARGB4444);
+		Assets.click = game.getAudio().newSound("click.ogg");
+		Assets.eat = game.getAudio().newSound("eat.ogg");
+		Assets.bitten = game.getAudio().newSound("bitten.ogg");
+		
+		Log.d("LoadingScreen", "DONE loading Assets!");
+		
+		Settings.load(game.getFileIO());
+		game.setScreen(new MainMenuScreen(game));
+		
+		loadButtons();
+		Log.d("LoadingScreen", "DONE loading Assets!");
+
+	}
+
+	private void loadButtons(){
+		Bitmap buttonLeft =  Bitmap.createBitmap(((AndroidPixmap)Assets.buttons).getBitmap(), 64, 64, 64, 64);
+		// get just the arrow button and then rotate it.
+		// saved rotated version in the right button
+		Assets.buttonLeft = new AndroidPixmap(buttonLeft, PixmapFormat.ARGB4444);
+		Matrix matrix = new Matrix();
+		matrix.setRotate(90);
+		
+		Bitmap buttonUp = Bitmap.createBitmap(buttonLeft, 0, 0, 64, 64, matrix, false);
+		Assets.buttonUp = new AndroidPixmap(buttonUp, PixmapFormat.ARGB4444);
+
+		Bitmap buttonRight = Bitmap.createBitmap(buttonUp, 0, 0, 64, 64, matrix, false);
+		Assets.buttonRight = new AndroidPixmap(buttonRight, PixmapFormat.ARGB4444);
+		
+		Bitmap buttonDown = Bitmap.createBitmap(buttonRight, 0, 0, 64, 64, matrix, false);
+		Assets.buttonDown = new AndroidPixmap(buttonDown, PixmapFormat.ARGB4444);
+	}
+	@Override
+	public void present(float deltaTime) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void pause() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void resume() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void dispose() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,45 @@
+package com.bkids.framework.impl;
+
+import android.app.Activity;
+
+import com.bkids.framework.Audio;
+import com.bkids.framework.Game;
+import com.bkids.framework.Graphics;
+import com.bkids.framework.Input;
+import com.bkids.framework.Screen;
+
+public class AndroidGame extends Activity implements Game {
+	
+	
+
+	public Input getInput() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Graphics getGraphics() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Audio getAudio() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void setScreen(Screen screen) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public Screen getCurrentScreen() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Screen getStartScreen() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

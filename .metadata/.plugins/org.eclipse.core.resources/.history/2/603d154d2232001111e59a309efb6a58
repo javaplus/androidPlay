@@ -1,0 +1,32 @@
+package com.bkids.framework.impl;
+
+import android.graphics.Bitmap;
+
+import com.bkids.framework.Pixmap;
+import com.bkids.framework.Graphics.PixmapFormat;
+
+public class AndroidPixmap implements Pixmap {
+	Bitmap bitmap;
+	PixmapFormat format;
+
+	public int getWidth() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public int getHeight() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public PixmapFormat getFormat() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void dispose() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

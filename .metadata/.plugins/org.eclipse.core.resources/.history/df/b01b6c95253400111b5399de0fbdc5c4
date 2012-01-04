@@ -1,0 +1,76 @@
+package com.bkids.androidgames.mrnom;
+
+import java.util.List;
+
+import android.util.Log;
+
+import com.bkids.framework.Game;
+import com.bkids.framework.Graphics;
+import com.bkids.framework.Input.TouchEvent;
+import com.bkids.framework.Screen;
+
+public class MainMenuScreen extends Screen {
+
+	public MainMenuScreen(Game game) {
+		super(game);
+		
+	}
+
+	@Override
+	public void update(float deltaTime) {
+		Log.d("MainMenuScreen", "Updating screen!");
+		
+		Graphics g = game.getGraphics();
+		List<TouchEvent> touchEvents = game.getInput().getTouchEvents();
+		game.getInput().getKeyEvents(); // just clear them.
+		int len = touchEvents.size();
+
+		for (int i = 0; i < len; i++) {
+			TouchEvent event = touchEvents.get(i);
+			if(event.type== TouchEvent.TOUCH_UP){
+				if(inBounds(event, 0, g.getHeight() - 64, 64, 64)){
+					//Log.d("MainMenuScreen", "Touched Sound enable");
+					Settings.soundEnabled = !Settings.soundEnabled;
+					if(Settings.soundEnabled){
+						Assets.click.play(1);
+					}
+				}
+				
+			}
+		}
+		
+	}
+	
+	private boolean inBounds(TouchEvent event, int x, int y, int width, int height){
+		if(event.x > x && event.x < x + width -1 && event.y > y && event.y < y + height -1){
+			return true;
+		}else{
+			return false;
+		}
+	}
+
+	@Override
+	public void present(float deltaTime) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void pause() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void resume() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void dispose() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

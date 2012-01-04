@@ -1,0 +1,57 @@
+package com.bkids.framework.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import android.view.MotionEvent;
+import android.view.View;
+
+import com.bkids.framework.Input.TouchEvent;
+import com.bkids.framework.Pool.PoolObjectFactory;
+import com.bkids.framework.Pool;
+
+public class SingleTouchHandler implements TouchHandler {
+	
+	boolean isTouched;
+	int touchX;
+	int touchY;
+	Pool<TouchEvent> touchEventPool;
+	List<TouchEvent> touchEvents = new ArrayList<TouchEvent>();
+	List<TouchEvent> touchEventsBuffer = new ArrayList<TouchEvent>();
+	float scaleX;
+	float scaleY;
+
+	public SingleTouchHandler(View view, float scaleX, float scaleY){
+		PoolObjectFactory<TouchEvent> factory = new PoolObjectFactory<TouchEvent>() {
+			public TouchEvent createObject() {
+				return new TouchEvent();
+			}
+		};
+	}
+	
+	public boolean onTouch(View arg0, MotionEvent arg1) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public boolean isTouchDown(int pointer) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public int getTouchX(int pointer) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public int getTouchY(int pointer) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public List<TouchEvent> getTouchEvents() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

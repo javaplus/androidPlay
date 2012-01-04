@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="WorkbenchPreferenceDialogSettings">
+		<item value="58" key="DIALOG_Y_ORIGIN"/>
+		<item value="143" key="DIALOG_X_ORIGIN"/>
+	</section>
+	<section name="NewWizardAction">
+	</section>
+	<section name="ShowViewDialog">
+		<item value="392" key="DIALOG_WIDTH"/>
+		<item value="com.android.ide.eclipse.ddms.views.LogCatView" key="ShowViewDialog.STORE_SELECTED_VIEW_ID"/>
+		<item value="198" key="DIALOG_Y_ORIGIN"/>
+		<item value="284" key="DIALOG_X_ORIGIN"/>
+		<item value="477" key="DIALOG_HEIGHT"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<list key="ShowViewDialog.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="com.android.ide.eclipse.ddms.views.category"/>
+		</list>
+	</section>
+</section>

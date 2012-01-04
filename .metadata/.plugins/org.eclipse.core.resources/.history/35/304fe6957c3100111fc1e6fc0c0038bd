@@ -1,0 +1,26 @@
+package com.bkids.framework.impl;
+
+import android.content.res.AssetManager;
+import android.media.SoundPool;
+
+import com.bkids.framework.Audio;
+import com.bkids.framework.Music;
+import com.bkids.framework.Sound;
+
+public class AndroidAudio implements Audio {
+	
+	AssetManager assetManager;
+	SoundPool soundPool;
+	
+
+	public Music newMusic(String filename) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Sound newSound(String filename) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

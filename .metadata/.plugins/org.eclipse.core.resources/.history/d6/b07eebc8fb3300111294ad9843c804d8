@@ -1,0 +1,37 @@
+package com.bkids.androidgames.mrnom;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+import com.bkids.framework.FileIO;
+
+public class Settings {
+
+	
+	public static boolean soundEnabled = true;
+	public static int[] highscores = new int[]{100, 80,50, 30, 10};
+	
+	public static void load(FileIO files){
+		BufferedReader in = null;
+		try {
+			
+			in = new BufferedReader(new InputStreamReader(files.readFile(".mrnom")));
+			
+			soundEnabled = Boolean.parseBoolean(in.readLine());
+			
+		} catch (IOException e) {
+			// It's ok we have defaults
+		}catch (NumberFormatException e){
+			// use defaults
+		}finally{
+			try{
+				if(in !=null)
+					in.close();
+			}catch(IOException e){
+				
+			}
+		}
+	}
+	
+}
