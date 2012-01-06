@@ -31,9 +31,6 @@ public class Assets {
 	public static Pixmap stain2;
 	public static Pixmap stain3;
 	public static Pixmap pie1;
-	public static Pixmap body1;
-	public static Pixmap body2;
-	public static Pixmap body3;
 	
 	public static Sound click;
 	public static Sound eat;

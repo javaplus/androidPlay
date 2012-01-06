@@ -15,9 +15,9 @@ public class Snake {
 	
 	public Snake(){
 		direction = UP;
-		parts.add(new SnakePart(5, 6, Stain.TYPE_1));
-		parts.add(new SnakePart(5, 7, Stain.TYPE_1 ));
-		parts.add(new SnakePart(5, 8, Stain.TYPE_1));
+		parts.add(new SnakePart(5, 6));
+		parts.add(new SnakePart(5, 7));
+		parts.add(new SnakePart(5, 8));
 	}
 	
 	
@@ -36,9 +36,9 @@ public class Snake {
 		}
 	}
 	
-	public void eat(int type){
-		SnakePart head = parts.get(0); // get head and add piece to where head was
-		parts.add(1, new SnakePart(head.x, head.y, type));
+	public void eat(){
+		SnakePart end = parts.get(parts.size()-1);
+		parts.add(new SnakePart(end.x, end.y));
 	}
 	
 	public void advance(){

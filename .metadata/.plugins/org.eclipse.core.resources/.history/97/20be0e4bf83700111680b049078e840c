@@ -173,13 +173,10 @@ public class GameScreen extends Screen {
 			Pixmap bodyImage = null;
 			switch (part.type) {
 			case Stain.TYPE_1:
-				bodyImage = Assets.body1;
+				bodyImage = Assets.
 				break;
-			case Stain.TYPE_2:
-				bodyImage = Assets.body2;
-				break;
-			case Stain.TYPE_3:
-				bodyImage = Assets.body3;
+
+			default:
 				break;
 			}
 			g.drawPixmap(bodyImage, x, y);

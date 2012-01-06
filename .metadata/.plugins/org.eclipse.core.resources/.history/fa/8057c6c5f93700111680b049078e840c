@@ -37,8 +37,8 @@ public class Snake {
 	}
 	
 	public void eat(int type){
-		SnakePart head = parts.get(0); // get head and add piece to where head was
-		parts.add(1, new SnakePart(head.x, head.y, type));
+		SnakePart end = parts.get(parts.size()-1);
+		parts.add(new SnakePart(end.x, end.y, type));
 	}
 	
 	public void advance(){

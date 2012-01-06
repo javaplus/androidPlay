@@ -77,7 +77,7 @@ public class World {
 			// check if stain was hit by head
 			if(head.x == stain.x && head.y == stain.y){
 				score += SCORE_INCREMENT;
-				snake.eat(stain.type);
+				snake.eat();
 				if(snake.parts.size() == WORLD_WIDTH * WORLD_HEIGHT){
 					gameOver = true;
 					return;

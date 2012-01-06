@@ -170,19 +170,7 @@ public class GameScreen extends Screen {
 			SnakePart part = snake.parts.get(i);
 			x = part.x * 32; // scale to fit them in 32 by 32 blocks
 			y = part.y * 32;
-			Pixmap bodyImage = null;
-			switch (part.type) {
-			case Stain.TYPE_1:
-				bodyImage = Assets.body1;
-				break;
-			case Stain.TYPE_2:
-				bodyImage = Assets.body2;
-				break;
-			case Stain.TYPE_3:
-				bodyImage = Assets.body3;
-				break;
-			}
-			g.drawPixmap(bodyImage, x, y);
+			g.drawPixmap(Assets.tail, x, y);
 		}
 		
 		// get correct head picture
