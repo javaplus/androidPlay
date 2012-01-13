@@ -1,0 +1,24 @@
+package com.bkids.framework;
+
+/**
+ * Interface for objects within the game that are drawable.
+ * 
+ * 
+ * @author TARLTOB1
+ *
+ */
+public interface GameDrawable {
+	
+	
+
+	// get the image to draw
+	public Pixmap draw(float deltaTime);
+	
+	/**
+	 * Used to initialize the data of this gameDrawable
+	 * 
+	 * @param gameObject
+	 */
+	public void initialize(GameObject gameObject);
+	
+}

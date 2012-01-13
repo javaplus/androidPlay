@@ -1,0 +1,13 @@
+package com.bkids.androidgames.mrnom;
+
+import com.bkids.framework.GameDrawable;
+import com.bkids.framework.Pixmap;
+
+public class SnakePartDrawable extends SnakePart implements GameDrawable {
+
+	public Pixmap draw(float deltaTime) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

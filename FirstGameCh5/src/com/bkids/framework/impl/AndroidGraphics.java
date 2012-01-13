@@ -142,5 +142,13 @@ public class AndroidGraphics implements Graphics {
 	public int getHeight() {
 		return frameBuffer.getHeight();
 	}
+	
+	public static Pixmap getPixmapPart(int x, int y, int width, int height, Pixmap pixmap){
+		AndroidPixmap aPixmap = (AndroidPixmap) pixmap;
+		
+		Bitmap newBitMap = Bitmap.createBitmap(aPixmap.bitmap, x, y, width, height);
+		
+		return new AndroidPixmap(newBitMap, PixmapFormat.ARGB4444);
+	}
 
 }

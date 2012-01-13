@@ -22,6 +22,7 @@ public class Assets {
 	public static Pixmap ready;
 	public static Pixmap pause;
 	public static Pixmap gameOver;
+	public static Pixmap headAnimRight;
 	public static Pixmap headUp;
 	public static Pixmap headLeft;
 	public static Pixmap headDown;

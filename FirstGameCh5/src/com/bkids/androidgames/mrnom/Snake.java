@@ -3,7 +3,15 @@ package com.bkids.androidgames.mrnom;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Snake {
+import android.graphics.Bitmap;
+import android.graphics.Rect;
+import android.util.Log;
+
+import com.bkids.framework.GameObject;
+import com.bkids.framework.Pixmap;
+import com.bkids.framework.impl.AndroidGraphics;
+
+public class Snake implements GameObject{
 
 	public static final int UP=0;
 	public static final int LEFT = 1;
@@ -12,12 +20,35 @@ public class Snake {
 	
 	public List<SnakePart> parts = new ArrayList<SnakePart>();
 	public int direction;
+
+	private int spriteWidth;    // the width of the sprite to calculate the cut out rectangle
+	private int spriteHeight;   // the height of the sprite
+
+	private int currentFrame;   // the current frame
+    private long frameTicker;   // the time of the last frame update
+	private int framePeriod;    // milliseconds between each frame (1000/fps)
+
+	private Pixmap pixmap;      // the animation sequence
+
+	private int frameCount; // how many frames in our animation.
 	
-	public Snake(){
+	private Pixmap currentPixmap;
+	
+	public Snake(int numberOfFrames){
+		frameCount = numberOfFrames;
+		pixmap = Assets.headAnimRight;
+	    spriteWidth = pixmap.getWidth() / frameCount;
+	    spriteHeight = pixmap.getHeight();
 		direction = UP;
 		parts.add(new SnakePart(5, 6, Stain.TYPE_1));
 		parts.add(new SnakePart(5, 7, Stain.TYPE_1 ));
 		parts.add(new SnakePart(5, 8, Stain.TYPE_1));
+		
+		frameTicker = 0l;
+		framePeriod = 1000/5; // 1 frame every 1/5 of a second
+		currentFrame = 0; // start with 1st frame
+		currentPixmap = AndroidGraphics.getPixmapPart(spriteWidth * currentFrame, 0, spriteWidth, spriteHeight , pixmap);
+		
 	}
 	
 	
@@ -94,6 +125,38 @@ public class Snake {
 			}
 		}
 		return false;
+	}
+	
+	public Pixmap draw(long gameTime) {
+		
+		//Log.d(Snake.class.toString(), "gameTime=)" + gameTime + " frameTicker =" + frameTicker + " framePeriod=" + framePeriod);
+		
+		if(gameTime > frameTicker + framePeriod){
+			// if enough time has passed move to the next frame
+			frameTicker = gameTime;
+			// advance the frame
+			currentFrame++;
+			if(currentFrame>=frameCount){
+				currentFrame =0;
+			}
+			currentPixmap = AndroidGraphics.getPixmapPart(spriteWidth * currentFrame, 0, spriteWidth, spriteHeight , pixmap);
+		}
+		
+		
+		
+		
+		// get correct head picture
+//		Pixmap headPixmap = null;
+//		if(direction == Snake.UP)
+//			headPixmap = Assets.headUp;
+//		if(direction == Snake.LEFT)
+//			headPixmap = Assets.headLeft;
+//		if(direction == Snake.DOWN)
+//			headPixmap = Assets.headDown;
+//		if(direction == Snake.RIGHT)
+//			headPixmap = Assets.headRight;
+//		
+		return currentPixmap;
 	}
 	
 }

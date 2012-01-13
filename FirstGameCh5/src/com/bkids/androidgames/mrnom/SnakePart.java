@@ -1,9 +1,17 @@
 package com.bkids.androidgames.mrnom;
 
-public class SnakePart {
+import com.bkids.framework.GameObject;
+import com.bkids.framework.Pixmap;
+
+public class SnakePart implements GameObject{
+	
+	public static final int TYPE_1 = 0;
+	public static final int TYPE_2 = 1;
+	public static final int TYPE_3 = 2;
 	
 	public int x,y;
 	public int type;
+	public int direction;
 	
 	public SnakePart(int x, int y, int type){
 		this.x = x;
@@ -11,5 +19,24 @@ public class SnakePart {
 		this.type = type;
 		
 	}
+	
+	public Pixmap draw(float deltaTime) {
+		Pixmap image = null;
+		switch (type) {
+		case TYPE_1:
+			image = Assets.body1;
+			break;
+		case TYPE_2:
+			image = Assets.body2;
+			break;
+		case TYPE_3:
+			image = Assets.body3;
+			break;
+		}
+		
+		return image;
+	}
+	
+	
 
 }

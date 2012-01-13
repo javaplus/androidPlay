@@ -21,7 +21,7 @@ public class World {
 	static float tick = TICK_INITIAL;
 
 	public World() {
-		snake = new Snake();
+		snake = new Snake(4);
 		placeStain();
 	}
 	

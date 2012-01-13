@@ -131,7 +131,7 @@ public class GameScreen extends Screen {
 		Graphics g = game.getGraphics();
 		
 		g.drawPixmap(Assets.background, 0, 0);
-		drawWorld(world);
+		drawWorld(world, deltaTime);
 		if(state == GameState.Ready)
 			drawReadyUI();
 		if(state == GameState.Running)
@@ -146,7 +146,7 @@ public class GameScreen extends Screen {
 		
 	}
 	
-	private void drawWorld(World world){
+	private void drawWorld(World world, float deltaTime){
 		Graphics g = game.getGraphics();
 		Snake snake = world.snake;
 		SnakePart head = snake.parts.get(0);
@@ -170,31 +170,14 @@ public class GameScreen extends Screen {
 			SnakePart part = snake.parts.get(i);
 			x = part.x * 32; // scale to fit them in 32 by 32 blocks
 			y = part.y * 32;
-			Pixmap bodyImage = null;
-			switch (part.type) {
-			case Stain.TYPE_1:
-				bodyImage = Assets.body1;
-				break;
-			case Stain.TYPE_2:
-				bodyImage = Assets.body2;
-				break;
-			case Stain.TYPE_3:
-				bodyImage = Assets.body3;
-				break;
-			}
+			Pixmap bodyImage = part.draw(deltaTime);
+			
 			g.drawPixmap(bodyImage, x, y);
 		}
 		
 		// get correct head picture
-		Pixmap headPixmap = null;
-		if(snake.direction == Snake.UP)
-			headPixmap = Assets.headUp;
-		if(snake.direction == Snake.LEFT)
-			headPixmap = Assets.headLeft;
-		if(snake.direction == Snake.DOWN)
-			headPixmap = Assets.headDown;
-		if(snake.direction == Snake.RIGHT)
-			headPixmap = Assets.headRight;
+		Pixmap headPixmap = snake.draw(System.currentTimeMillis());
+		
 		x = head.x * 32 + 16; // head is bigger than body
 		y = head.y * 32 + 16;
 		g.drawPixmap(headPixmap, x - headPixmap.getWidth() / 2, y -	headPixmap.getHeight() / 2);
