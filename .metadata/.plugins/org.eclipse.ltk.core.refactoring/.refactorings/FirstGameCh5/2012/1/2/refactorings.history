@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename method &apos;com.bkids.androidgames.mrnom.Snake.draw(...)&apos; to &apos;getPixmapToDraw&apos;&#x0D;&#x0A;- Original project: &apos;FirstGameCh5&apos;&#x0D;&#x0A;- Original element: &apos;com.bkids.androidgames.mrnom.Snake.draw(...)&apos;&#x0D;&#x0A;- Renamed element: &apos;com.bkids.androidgames.mrnom.Snake.getPixmapToDraw(...)&apos;&#x0D;&#x0A;- Update references to refactored element" delegate="false" deprecate="true" description="Rename method &apos;draw&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.method" input="/src&lt;com.bkids.androidgames.mrnom{Snake.java[Snake~draw~J" name="getPixmapToDraw" references="true" stamp="1326465543750" version="1.0"/>
+</session>

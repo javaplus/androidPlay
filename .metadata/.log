@@ -8073,3 +8073,75 @@ com.android.ddmlib.ShellCommandUnresponsiveException
 	at com.android.ide.eclipse.adt.internal.launch.AndroidLaunchController.simpleLaunch(Unknown Source)
 	at com.android.ide.eclipse.adt.internal.launch.AndroidLaunchController.access$3(Unknown Source)
 	at com.android.ide.eclipse.adt.internal.launch.AndroidLaunchController$3.run(Unknown Source)
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2012-01-13 09:41:18.531
+!MESSAGE No command output when running: 'am start -n com.bkids/com.bkids.androidgames.mrnom.MrNomGame -a android.intent.action.MAIN -c android.intent.category.LAUNCHER' on device emulator-5554
+!STACK 0
+com.android.ddmlib.ShellCommandUnresponsiveException
+	at com.android.ddmlib.AdbHelper.executeRemoteCommand(AdbHelper.java:408)
+	at com.android.ddmlib.Device.executeShellCommand(Device.java:276)
+	at com.android.ide.eclipse.adt.internal.launch.ActivityLaunchAction.doLaunchAction(Unknown Source)
+	at com.android.ide.eclipse.adt.internal.launch.AndroidLaunchController.launchApp(Unknown Source)
+	at com.android.ide.eclipse.adt.internal.launch.AndroidLaunchController.simpleLaunch(Unknown Source)
+	at com.android.ide.eclipse.adt.internal.launch.AndroidLaunchController.access$3(Unknown Source)
+	at com.android.ide.eclipse.adt.internal.launch.AndroidLaunchController$3.run(Unknown Source)
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2012-01-13 10:13:19.265
+!MESSAGE No command output when running: 'am start -n com.bkids/com.bkids.androidgames.mrnom.MrNomGame -a android.intent.action.MAIN -c android.intent.category.LAUNCHER' on device emulator-5554
+!STACK 0
+com.android.ddmlib.ShellCommandUnresponsiveException
+	at com.android.ddmlib.AdbHelper.executeRemoteCommand(AdbHelper.java:408)
+	at com.android.ddmlib.Device.executeShellCommand(Device.java:276)
+	at com.android.ide.eclipse.adt.internal.launch.ActivityLaunchAction.doLaunchAction(Unknown Source)
+	at com.android.ide.eclipse.adt.internal.launch.AndroidLaunchController.launchApp(Unknown Source)
+	at com.android.ide.eclipse.adt.internal.launch.AndroidLaunchController.simpleLaunch(Unknown Source)
+	at com.android.ide.eclipse.adt.internal.launch.AndroidLaunchController.access$3(Unknown Source)
+	at com.android.ide.eclipse.adt.internal.launch.AndroidLaunchController$3.run(Unknown Source)
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2012-01-13 10:46:54.359
+!MESSAGE No command output when running: 'am start -n com.bkids/com.bkids.androidgames.mrnom.MrNomGame -a android.intent.action.MAIN -c android.intent.category.LAUNCHER' on device emulator-5554
+!STACK 0
+com.android.ddmlib.ShellCommandUnresponsiveException
+	at com.android.ddmlib.AdbHelper.executeRemoteCommand(AdbHelper.java:408)
+	at com.android.ddmlib.Device.executeShellCommand(Device.java:276)
+	at com.android.ide.eclipse.adt.internal.launch.ActivityLaunchAction.doLaunchAction(Unknown Source)
+	at com.android.ide.eclipse.adt.internal.launch.AndroidLaunchController.launchApp(Unknown Source)
+	at com.android.ide.eclipse.adt.internal.launch.AndroidLaunchController.simpleLaunch(Unknown Source)
+	at com.android.ide.eclipse.adt.internal.launch.AndroidLaunchController.access$3(Unknown Source)
+	at com.android.ide.eclipse.adt.internal.launch.AndroidLaunchController$3.run(Unknown Source)
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2012-01-13 12:49:53.921
+!MESSAGE No command output when running: 'am start -n com.bkids/com.bkids.androidgames.mrnom.MrNomGame -a android.intent.action.MAIN -c android.intent.category.LAUNCHER' on device emulator-5554
+!STACK 0
+com.android.ddmlib.ShellCommandUnresponsiveException
+	at com.android.ddmlib.AdbHelper.executeRemoteCommand(AdbHelper.java:408)
+	at com.android.ddmlib.Device.executeShellCommand(Device.java:276)
+	at com.android.ide.eclipse.adt.internal.launch.ActivityLaunchAction.doLaunchAction(Unknown Source)
+	at com.android.ide.eclipse.adt.internal.launch.AndroidLaunchController.launchApp(Unknown Source)
+	at com.android.ide.eclipse.adt.internal.launch.AndroidLaunchController.simpleLaunch(Unknown Source)
+	at com.android.ide.eclipse.adt.internal.launch.AndroidLaunchController.access$3(Unknown Source)
+	at com.android.ide.eclipse.adt.internal.launch.AndroidLaunchController$3.run(Unknown Source)
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2012-01-13 12:53:16.531
+!MESSAGE No command output when running: 'am start -n com.bkids/com.bkids.androidgames.mrnom.MrNomGame -a android.intent.action.MAIN -c android.intent.category.LAUNCHER' on device emulator-5554
+!STACK 0
+com.android.ddmlib.ShellCommandUnresponsiveException
+	at com.android.ddmlib.AdbHelper.executeRemoteCommand(AdbHelper.java:408)
+	at com.android.ddmlib.Device.executeShellCommand(Device.java:276)
+	at com.android.ide.eclipse.adt.internal.launch.ActivityLaunchAction.doLaunchAction(Unknown Source)
+	at com.android.ide.eclipse.adt.internal.launch.AndroidLaunchController.launchApp(Unknown Source)
+	at com.android.ide.eclipse.adt.internal.launch.AndroidLaunchController.simpleLaunch(Unknown Source)
+	at com.android.ide.eclipse.adt.internal.launch.AndroidLaunchController.access$3(Unknown Source)
+	at com.android.ide.eclipse.adt.internal.launch.AndroidLaunchController$3.run(Unknown Source)
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2012-01-13 12:54:16.250
+!MESSAGE No command output when running: 'am start -n com.bkids/com.bkids.androidgames.mrnom.MrNomGame -a android.intent.action.MAIN -c android.intent.category.LAUNCHER' on device emulator-5554
+!STACK 0
+com.android.ddmlib.ShellCommandUnresponsiveException
+	at com.android.ddmlib.AdbHelper.executeRemoteCommand(AdbHelper.java:408)
+	at com.android.ddmlib.Device.executeShellCommand(Device.java:276)
+	at com.android.ide.eclipse.adt.internal.launch.ActivityLaunchAction.doLaunchAction(Unknown Source)
+	at com.android.ide.eclipse.adt.internal.launch.AndroidLaunchController.launchApp(Unknown Source)
+	at com.android.ide.eclipse.adt.internal.launch.AndroidLaunchController.simpleLaunch(Unknown Source)
+	at com.android.ide.eclipse.adt.internal.launch.AndroidLaunchController.access$3(Unknown Source)
+	at com.android.ide.eclipse.adt.internal.launch.AndroidLaunchController$3.run(Unknown Source)

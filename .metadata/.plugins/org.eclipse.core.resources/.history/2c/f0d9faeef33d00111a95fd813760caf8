@@ -3,6 +3,10 @@ package com.bkids.androidgames.mrnom;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.graphics.Bitmap;
+import android.graphics.Rect;
+import android.util.Log;
+
 import com.bkids.framework.GameObject;
 import com.bkids.framework.Pixmap;
 import com.bkids.framework.impl.AndroidGraphics;
@@ -34,7 +38,7 @@ public class Snake implements GameObject{
 		frameCount = numberOfFrames;
 		pixmap = Assets.headAnimRight;
 	    spriteWidth = pixmap.getWidth() / frameCount;
-	    spriteHeight = 42;
+	    spriteHeight = pixmap.getHeight();
 		direction = UP;
 		parts.add(new SnakePart(5, 6, Stain.TYPE_1));
 		parts.add(new SnakePart(5, 7, Stain.TYPE_1 ));
@@ -123,16 +127,10 @@ public class Snake implements GameObject{
 		return false;
 	}
 	
-	/**
-	 * Returns the Pixmap that should be drawn
-	 * 
-	 * @param gameTime - time in current time in milliseconds
-	 * @return
-	 */
-	public Pixmap getPixmapToDraw(long gameTime) {
+	public Pixmap draw(long gameTime) {
 		
 		//Log.d(Snake.class.toString(), "gameTime=)" + gameTime + " frameTicker =" + frameTicker + " framePeriod=" + framePeriod);
-		// determine if enough time has passed.
+		
 		if(gameTime > frameTicker + framePeriod){
 			// if enough time has passed move to the next frame
 			frameTicker = gameTime;

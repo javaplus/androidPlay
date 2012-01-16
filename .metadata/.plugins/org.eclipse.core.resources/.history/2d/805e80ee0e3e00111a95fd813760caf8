@@ -45,7 +45,7 @@ public class LoadingScreen extends Screen {
 		Assets.stain1 = g.newPixmap("pie1.png", PixmapFormat.ARGB4444);
 		Assets.stain2 = g.newPixmap("pie2.png", PixmapFormat.ARGB4444);
 		Assets.stain3 = g.newPixmap("pie3.png", PixmapFormat.ARGB4444);
-		Assets.headAnimRight = g.newPixmap("headPie4by4.png", PixmapFormat.ARGB4444);
+		Assets.headAnimRight = g.newPixmap("karlRightAnimColor.png", PixmapFormat.ARGB4444);
 		Assets.click = game.getAudio().newSound("click.ogg");
 		Assets.eat = game.getAudio().newSound("silaSchomp.ogg");
 		Assets.bitten = game.getAudio().newSound("bitten.ogg");

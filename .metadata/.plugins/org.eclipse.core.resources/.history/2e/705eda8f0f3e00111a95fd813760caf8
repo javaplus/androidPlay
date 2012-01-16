@@ -41,7 +41,7 @@ public class Snake implements GameObject{
 		parts.add(new SnakePart(5, 8, Stain.TYPE_1));
 		
 		frameTicker = 0l;
-		framePeriod = 1000/5; // 1 frame every 1/5 of a second
+		framePeriod = 1000/4; // 1 frame every 1/5 of a second
 		currentFrame = 0; // start with 1st frame
 		currentPixmap = AndroidGraphics.getPixmapPart(spriteWidth * currentFrame, 0, spriteWidth, spriteHeight , pixmap);
 		

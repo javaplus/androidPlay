@@ -176,7 +176,7 @@ public class GameScreen extends Screen {
 		}
 		
 		// get correct head picture
-		Pixmap headPixmap = snake.getPixmapToDraw(System.currentTimeMillis());
+		Pixmap headPixmap = snake.draw(System.currentTimeMillis());
 		
 		x = head.x * 32 + 16; // head is bigger than body
 		y = head.y * 32 + 16;
