@@ -141,7 +141,7 @@ public class Snake implements GameObject{
 			if(currentFrame>=frameCount){
 				currentFrame =0;
 			}
-			currentPixmap = AndroidGraphics.getPixmapPart(spriteWidth * currentFrame, spriteHeight * direction, spriteWidth, spriteHeight , pixmap);
+			currentPixmap = AndroidGraphics.getPixmapPart(spriteWidth * currentFrame, 0, spriteWidth, spriteHeight , pixmap);
 		}
 		
 		

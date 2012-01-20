@@ -56,7 +56,7 @@ public class AndroidGraphics implements Graphics {
 			}
 			
 		} catch (IOException e) {
-			Log.e("AndroidGraphics", "Couldn't load bitmap from asset '" + fileName + "'" + e.getMessage(), e);
+			Log.e("AndroidGraphics", "Couldn't load bitmap from asset '" + fileName + "'", e);
 			throw new RuntimeException("Couldn't load bitmap from asset '" + fileName + "'", e);
 		}finally{
 			if(in!=null){
